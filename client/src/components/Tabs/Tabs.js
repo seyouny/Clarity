@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -22,7 +22,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
@@ -53,6 +53,18 @@ function LinkTab(props) {
     />
   );
 }
+const StyledTabs = withStyles({
+  indicator: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    '& > span': {
+      maxWidth: 40,
+      width: '100%',
+      backgroundColor: '#635ee7',
+    },
+  },
+})((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   tab:{
-    backgroundColor:"black"
+    backgroundColor:'#2e1534'
   }
 }));
 
@@ -76,7 +88,7 @@ export default function NavTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <div className={classes.tab}>
-        <Tabs
+        <StyledTabs
           variant="fullWidth"
           value={value}
           onChange={handleChange}
@@ -85,20 +97,17 @@ export default function NavTabs() {
           <LinkTab label="ADHD" href="/drafts" {...a11yProps(0)} />
           <LinkTab label="Depression" href="/trash" {...a11yProps(1)} />
           <LinkTab label="PTSD" href="/spam" {...a11yProps(2)} />
-        </Tabs>
+        </StyledTabs>
         </div>
       </AppBar>
       <TabPanel value={value} index={0}>
         ADHD
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div>
-        <div><Depression/></div>
-        
-        </div>
+        <Depression/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="breathe"><Breathe/></div>
+        <Breathe className="breathe"/>
       </TabPanel>
     </div>
   );

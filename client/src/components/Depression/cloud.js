@@ -118,7 +118,7 @@ export default function SadCloud() {
             </Grid>
             <Grid item xs>
             <Typography variant="h6">Resources</Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" component="span">
                 <br></br>
                 <Link href="https://www.samhsa.gov/find-help/national-helpline" onClick={preventDefault} color="primary">SAMHSA help hotline</Link>
                 <p>
