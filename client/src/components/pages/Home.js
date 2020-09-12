@@ -7,7 +7,7 @@ export default function Home() {
         <div>
             <Speech/>
             <Tabs/>
-            <SimplePaper />
+            {/* <SimplePaper /> */}
         </div>
     )
 }

@@ -1,15 +1,17 @@
 /* body {
 	background: #bbb;
 } */
-
-.wrapper {
-    margin: 10%;
-	position: absolute;
+/* .sadCloud{
+    border:solid;
+} */
+/* .wrapper { */
+    /* margin: 10%; */
+	/* position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	height: 200px;
-}
+} */
 
 .cloud {
 	overflow: hidden;

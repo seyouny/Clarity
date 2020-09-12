@@ -5,11 +5,14 @@ import Home from "./components/pages/Home"
 import Color from "./components/pages/colorTher"
 function App() {
   return (
+    // <div>Color Theory</div>
     <div className="App">
-      {/* <NavBar/>
+      <NavBar/>
       <hr/>
-      <Home/> */}
-    <Color/>
+      <div className="paper"> 
+      <Home/>
+      </div>
+    {/* <Color/> */}
     </div>
   );
 }
