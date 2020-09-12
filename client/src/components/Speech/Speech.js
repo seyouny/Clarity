@@ -1,28 +1,38 @@
-import React, { useState, useEffect } from 'react'
+import React, {useEffect, useContext } from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
-import { words } from "./words.json"
+import { angryWords } from "./angryWords.json"
+import { depressedWords } from "./depressedWord.json"
+import PageContext from "../../utils/PageContext"
 export default function Speech() {
-    const { transcript, resetTranscript } = useSpeechRecognition()
-    let [score, setscore] = useState(0)
-    
+    const { transcript, resetTranscript } = useSpeechRecognition();
+    const { angryScore, setAngryScore, depressedScore, setDepressedScore } = useContext(PageContext)
     // useEffect(() => {
-    //     let replacedLetters = []
+    //     let replacedLetters = [];
+
     //     words.forEach((word) => {
     //         replacedLetters.push(word[0] + "*".repeat(word.length - 2))
     //      })
-    
+    //     console.log(replacedLetters);
     //     words.push([...replacedLetters])
     // }, [])
     
-            
-
     useEffect(() => {
         const spokenWords = transcript.split(" ");
-
         console.log(spokenWords[spokenWords.length - 1])
-        if (words.includes(spokenWords[spokenWords.length - 1])) {
+
+        if (angryWords.includes(spokenWords[spokenWords.length - 1])) {
             console.log(spokenWords[spokenWords.length - 1])
-            setscore(score + 1)
+            setAngryScore(angryScore + 1)
+        };
+
+        if (angryWords.includes(spokenWords[spokenWords.length - 1])) {
+            console.log(spokenWords[spokenWords.length - 1])
+            setAngryScore(angryScore + 1)
+        };
+
+        if (depressedWords.includes(spokenWords[spokenWords.length - 1])) {
+            console.log(spokenWords[spokenWords.length - 1])
+            setDepressedScore(depressedScore + 1)
         };
     }, [transcript])
 
@@ -30,8 +40,11 @@ export default function Speech() {
         console.log("not supported");
         return null
     }
+
     function reset(e) {
-        setscore(0)
+        e.preventDefault();
+        setAngryScore(0)
+        setDepressedScore(0)
         resetTranscript()
     }
     
@@ -41,7 +54,7 @@ export default function Speech() {
         <button onClick={SpeechRecognition.stopListening}>Stop</button>
         <button onClick={e => reset(e)}>Reset</button>
         <p>{transcript}</p>
-        <p>{score}</p>
+        <p>Angry Score: {angryScore}, Sad Score: {depressedScore}</p>
       </div>
     )
 }
