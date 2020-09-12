@@ -8,3 +8,6 @@
     margin-top:5%;
     text-align: center;
 }
+.breathe{
+    z-index: 99;
+}

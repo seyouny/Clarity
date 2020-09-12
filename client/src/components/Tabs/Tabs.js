@@ -7,7 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Depression from '../pages/depression'
-
+import Breathe from '../PTSD/breathe'
+import '../../style.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -97,7 +98,7 @@ export default function NavTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        PTSD
+        <div className="breathe"><Breathe/></div>
       </TabPanel>
     </div>
   );
