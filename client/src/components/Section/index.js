@@ -12,6 +12,11 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(50),
     },
   },
+  paperRoot: {
+    backgroundColor: "#61C3FF",
+    borderStyle: "solid",
+    borderColor: "white"
+  }
 }));
 
 export default function SimplePaper() {
@@ -20,12 +25,12 @@ export default function SimplePaper() {
   return (
     <div className={classes.root}>
 
-      <Paper />
-      <Paper />
-      <Paper />
-      <Paper />
-      <Paper />
-      <Paper />
+      <Paper className={classes.paperRoot} elevation={5}/>
+      <Paper className={classes.paperRoot}/>
+      <Paper className={classes.paperRoot}/>
+      <Paper className={classes.paperRoot}/>
+      <Paper className={classes.paperRoot}/>
+      <Paper className={classes.paperRoot}/>
 
     </div>
   );
