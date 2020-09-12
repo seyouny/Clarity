@@ -92,9 +92,9 @@ export default function NavTabs() {
         ADHD
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div>hi
+        <div>
         <div><Depression/></div>
-        hi
+        
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
