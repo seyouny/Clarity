@@ -11,7 +11,7 @@ import "./colorstyle.css"
 export default function Color() {
   return (<div>
     <div className="title">
-      Color Therapy
+      Color Therapy.
   </div>
   <div className="colors">
     <Pink/> Red is used to stimulate the body and mind and to increase circulation.
