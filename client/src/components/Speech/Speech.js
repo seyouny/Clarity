@@ -6,24 +6,10 @@ import PageContext from "../../utils/PageContext"
 export default function Speech() {
     const { transcript, resetTranscript } = useSpeechRecognition();
     const { angryScore, setAngryScore, depressedScore, setDepressedScore } = useContext(PageContext)
-    // useEffect(() => {
-    //     let replacedLetters = [];
-
-    //     words.forEach((word) => {
-    //         replacedLetters.push(word[0] + "*".repeat(word.length - 2))
-    //      })
-    //     console.log(replacedLetters);
-    //     words.push([...replacedLetters])
-    // }, [])
     
     useEffect(() => {
         const spokenWords = transcript.split(" ");
         console.log(spokenWords[spokenWords.length - 1])
-
-        if (angryWords.includes(spokenWords[spokenWords.length - 1])) {
-            console.log(spokenWords[spokenWords.length - 1])
-            setAngryScore(angryScore + 1)
-        };
 
         if (angryWords.includes(spokenWords[spokenWords.length - 1])) {
             console.log(spokenWords[spokenWords.length - 1])

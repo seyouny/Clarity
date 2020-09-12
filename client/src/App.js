@@ -8,12 +8,9 @@ import Home from "./components/pages/Home"
 function App() {
   const  [angryScore, setAngryScore] = useState(0)
   const [depressedScore, setDepressedScore] = useState(0)
-  
-  let red = 167;
-  let blue = 202;
 
   useEffect(()=> {
-      document.body.style.backgroundColor = `rgb(${red - angryScore*10}, ${blue - depressedScore*10}, 233)`
+      document.body.style.backgroundColor = `rgb(${167 + angryScore*10 - depressedScore*5}, ${202 - angryScore*5}, ${233 + depressedScore*10 - angryScore*5})`
   }, [angryScore, depressedScore])
 
   return (

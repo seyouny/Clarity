@@ -11,12 +11,6 @@ import {
 } from "react-router-dom";
 
 export default function Navbar() {
-    function handleClick(event) {
-        event.preventDefault();
-        console.info('You clicked a breadcrumb.');
-        
-      }
-
     return (
       <Router>
       <div>
