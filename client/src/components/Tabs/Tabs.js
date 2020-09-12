@@ -6,6 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Depression from '../pages/depression'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  tab:{
+    backgroundColor:"black"
+  }
 }));
 
 export default function NavTabs() {
@@ -70,22 +74,27 @@ export default function NavTabs() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
+        <div className={classes.tab}>
         <Tabs
           variant="fullWidth"
           value={value}
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Page One" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="ADHD" href="/drafts" {...a11yProps(0)} />
+          <LinkTab label="Depression" href="/trash" {...a11yProps(1)} />
+          <LinkTab label="PTSD" href="/spam" {...a11yProps(2)} />
         </Tabs>
+        </div>
       </AppBar>
       <TabPanel value={value} index={0}>
         ADHD
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Depression
+        <div>hi
+        <div><Depression/></div>
+        hi
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
         PTSD
