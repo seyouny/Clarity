@@ -15,7 +15,6 @@ export default function SadCloud() {
             primary:{
                 main:'#03a9f4'
             }
-
         },
         typography: {
           // Tell Material-UI what's the font-size on the html element is.
@@ -35,7 +34,7 @@ export default function SadCloud() {
       });
     return (
         <div>
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
         <Grid
             container
             direction="column"
@@ -84,22 +83,43 @@ export default function SadCloud() {
         container
         direction="row"
         justify="center"
-        alignItems="center"
+        alignItems="flex-start"
         spacing = {9}
         >
             <Grid item xs>
             <Typography variant="h6">Signs and Symptoms</Typography>
             <Typography variant="body1">
+                <br></br>
                 ○  Persistent sad, anxious, or “empty” mood.<br></br>
-                ○  Feelings of hopelessness, or pessimism<br></br>
-                ○  Irritability <br></br>
-                ○  Feelings of guilt, worthlessness, or helplessness<br></br>
+                ○  Feelings of hopelessness, or pessimism.<br></br>
+                ○  Irritability. <br></br>
+                ○  Feelings of guilt, worthlessness, or helplessness.<br></br>
+                ○  Difficulty concentrating.<br></br>
+                ○  Diet change (sudden loss or gain of weight).<br></br>
+                ○  Difficulty sleeping.<br></br>
+                ○  Thoughts of death or suicide.<br></br>
+                ○  Loss of pleasure or interest in your hobbies. <br></br>
+            </Typography>
+            </Grid>
+            <Grid item xs>
+            <Typography variant="h6">Treatments</Typography>
+            <Typography variant="body1">
+            <br></br>
+                ○  Phsychotherapy<br></br>
+                ○  Electroconvulsive therapy (experimental)<br></br>
+                ○  Antidepressants <br></br>
+                ○  Working on a new routine with increased activity. <br></br>
+                ○  Setting realistic goals and working towards them. <br></br>
+                ○  Educating yourself about the issue. <br></br>
+                ○  Keeping yourself around others and avoiding isolation. <br></br>
+                ○  Possibly postpone important decisions <br></br>
+                
             </Typography>
             </Grid>
             <Grid item xs>
             <Typography variant="h6">Resources</Typography>
             <Typography variant="body1">
-                
+                <br></br>
                 <Link href="https://www.samhsa.gov/find-help/national-helpline" onClick={preventDefault} color="primary">SAMHSA help hotline</Link>
                 <p>
                     This link leads you to SAMHSA website where you can find resources such as their 24 hour hotline if you or someone you know has depression.
