@@ -18,3 +18,15 @@ The challenging part of this application was after learning how to record audio 
 [Material UI]
 [Web Speech API]
 
+# Contributors
+[Eddy Yang]
+GitHub: 
+LinkedIn:
+[Stacey Yoon]
+GitHub:
+LinkedIn:
+[Royce Williams]
+GitHub:
+LinkedIn:
+
+
