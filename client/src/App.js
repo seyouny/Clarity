@@ -3,14 +3,13 @@ import NavBar from "./components/Navbar/Navbar"
 import PageContext from "./utils/PageContext"
 import "./style.css" 
 import Home from "./components/pages/Home"
-import {AuthProvider} from "./utils/authContext";// import Color from "./components/pages/colorTher"
+// import {AuthProvider} from "./utils/authContext";
 import Color from "./components/pages/colorTher"
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 

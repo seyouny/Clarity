@@ -2,14 +2,9 @@ import React from 'react'
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 // import Link from '@material-ui/core/Link';
 import "./Navbar.css"
-import Color from "../pages/colorTher"
+// import Color from "../pages/colorTher"
 import Link from '@material-ui/core/Link';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-  // Link
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Navbar() {
     return (

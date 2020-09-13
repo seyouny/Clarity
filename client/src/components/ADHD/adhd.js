@@ -55,7 +55,7 @@ export default function PTSD() {
             </Grid>
             <Grid item md>
             </Grid>
-            <img src='https://media2.giphy.com/media/JpFZBAXIwJKHTY4zDQ/giphy.gif'/>
+            <img src='https://media2.giphy.com/media/JpFZBAXIwJKHTY4zDQ/giphy.gif' alt="headception"/>
         </Grid>
         <Grid
         container
