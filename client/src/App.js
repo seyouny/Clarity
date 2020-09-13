@@ -4,7 +4,7 @@ import PageContext from "./utils/PageContext"
 import "./style.css" 
 import Home from "./components/pages/Home"
 import {AuthProvider} from "./utils/authContext";// import Color from "./components/pages/colorTher"
-import Color from "./component/pages/colorTher"
+import Color from "./components/pages/colorTher"
 
 import {
   BrowserRouter as Router,
@@ -23,7 +23,7 @@ function App() {
 
   return (
     // <div>Color Theory</div>
-    <AuthProvider>
+    // <AuthProvider>
       <PageContext.Provider value={{angryScore, setAngryScore, depressedScore, setDepressedScore}}>
         <div className="App">
           <NavBar/>
@@ -43,7 +43,7 @@ function App() {
           {/* <Color/> */}
         </div>
       </PageContext.Provider>
-    </AuthProvider>
+    // </AuthProvider>
   );
 }
 

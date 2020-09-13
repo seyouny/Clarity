@@ -3,23 +3,24 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 // import Link from '@material-ui/core/Link';
 import "./Navbar.css"
 import Color from "../pages/colorTher"
+import Link from '@material-ui/core/Link';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+  // Link
 } from "react-router-dom";
 
 export default function Navbar() {
     return (
-      // <Router>
+      <Router>
       <div>
         <Breadcrumbs maxItems={2} aria-label="breadcrumb" className="navbar">
-        <Link color="inherit" to="/about">Home</Link>
+        <Link color="inherit" href="/about">Home</Link>
 
         /
 
-        <Link color="inherit" to="/colortherapy">Color Therapy</Link>
+        <Link color="inherit" href="/colortherapy">Color Therapy</Link>
 
 
            
@@ -35,8 +36,10 @@ export default function Navbar() {
           </Route>
         </Switch>
      
-    </Router> */}
+     */}
+     
       </div>
+      </Router>
   );
 }
     
