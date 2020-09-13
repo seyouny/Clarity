@@ -4,6 +4,14 @@ import PageContext from "./utils/PageContext"
 import "./style.css" 
 import Home from "./components/pages/Home"
 import {AuthProvider} from "./utils/authContext";// import Color from "./components/pages/colorTher"
+import Color from "./component/pages/colorTher"
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const  [angryScore, setAngryScore] = useState(0)
@@ -19,8 +27,19 @@ function App() {
       <PageContext.Provider value={{angryScore, setAngryScore, depressedScore, setDepressedScore}}>
         <div className="App">
           <NavBar/>
+          <Router>
+            <Switch>
+              <Route path="/about" component = {Home}>
+                {/* <Home/> */}
+            </Route>
+            <Route path="/colortherapy" component ={Color}>
+              {/* <Color /> */}
+            </Route>
+          </Switch>
+      
+          </Router>
           <hr/>
-          <Home/>
+          
           {/* <Color/> */}
         </div>
       </PageContext.Provider>

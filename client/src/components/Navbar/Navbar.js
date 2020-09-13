@@ -12,7 +12,7 @@ import {
 
 export default function Navbar() {
     return (
-      <Router>
+      // <Router>
       <div>
         <Breadcrumbs maxItems={2} aria-label="breadcrumb" className="navbar">
         <Link color="inherit" to="/about">Home</Link>
@@ -27,27 +27,16 @@ export default function Navbar() {
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
+        {/* <Switch>
           <Route path="/about">
           </Route>
           <Route path="/colortherapy">
             <Color />
           </Route>
         </Switch>
+     
+    </Router> */}
       </div>
-    </Router>
   );
 }
-      // <Router>
-      //   <Breadcrumbs maxItems={2} aria-label="breadcrumb" className="navbar">
-      //     <Route path="/colortherapy"><Color/>Color Therapy</Route>
-      //   {/* <Link color="inherit" to="../pages/colorTher" onClick={handleClick}>
-      //     Color Therapy
-      //   </Link> */}
-      //   <Link color="inherit" href="#" onClick={handleClick}>
-      //     About
-      //   </Link>
-      // </Breadcrumbs>
-      // </Router>
-//     )
-// }
+    
