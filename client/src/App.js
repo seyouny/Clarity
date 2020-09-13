@@ -13,6 +13,7 @@ import {
   Link
 } from "react-router-dom";
 
+
 function App() {
   const  [angryScore, setAngryScore] = useState(0)
   const [depressedScore, setDepressedScore] = useState(0)
@@ -44,6 +45,7 @@ function App() {
         </div>
       </PageContext.Provider>
     // </AuthProvider>
+
   );
 }
 

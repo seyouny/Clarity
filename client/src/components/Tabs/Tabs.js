@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Depression from '../pages/depression'
 import PTSD from '../PTSD/ptsd'
+import ADHD from '../ADHD/adhd'
 import '../../style.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   tab:{
-    backgroundColor:'#2e1534'
+    backgroundColor:'black'
   }
 }));
 
@@ -101,7 +102,7 @@ export default function NavTabs() {
         </div>
       </AppBar>
       <TabPanel value={value} index={0}>
-        ADHD
+        <ADHD/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Depression/>
