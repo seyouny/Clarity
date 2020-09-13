@@ -3,7 +3,7 @@ import NavBar from "./components/Navbar/Navbar"
 import PageContext from "./utils/PageContext"
 import "./style.css" 
 import Home from "./components/pages/Home"
-// import Color from "./components/pages/colorTher"
+import {AuthProvider} from "./utils/authContext";// import Color from "./components/pages/colorTher"
 
 function App() {
   const  [angryScore, setAngryScore] = useState(0)
@@ -15,14 +15,16 @@ function App() {
 
   return (
     // <div>Color Theory</div>
-    <PageContext.Provider value={{angryScore, setAngryScore, depressedScore, setDepressedScore}}>
-      <div className="App">
-        <NavBar/>
-        <hr/>
-        <Home/>
-        {/* <Color/> */}
-      </div>
-    </PageContext.Provider>
+    <AuthProvider>
+      <PageContext.Provider value={{angryScore, setAngryScore, depressedScore, setDepressedScore}}>
+        <div className="App">
+          <NavBar/>
+          <hr/>
+          <Home/>
+          {/* <Color/> */}
+        </div>
+      </PageContext.Provider>
+    </AuthProvider>
   );
 }
 
