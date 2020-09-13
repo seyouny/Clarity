@@ -33,7 +33,7 @@ function App() {
               <Route path="/about" component = {Home}>
                 {/* <Home/> */}
             </Route>
-            <Route path="/colortherapy" component ={Color}>
+            <Route path="/" component ={Color}>
               {/* <Color /> */}
             </Route>
           </Switch>

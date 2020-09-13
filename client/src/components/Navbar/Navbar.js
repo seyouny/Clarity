@@ -15,12 +15,12 @@ export default function Navbar() {
     return (
       <Router>
       <div>
-        <Breadcrumbs maxItems={2} aria-label="breadcrumb" className="navbar">
-        <Link color="inherit" href="/about">Home</Link>
+        <Breadcrumbs maxItems={2} aria-label="breadcrumb" className="navbar" fontSize="large">
+        <Link color="inherit" href="/">Home</Link>
 
-        /
+        |
 
-        <Link color="inherit" href="/colortherapy">Color Therapy</Link>
+        <Link color="inherit" href="/about">Info</Link>
 
 
            
